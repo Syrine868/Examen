@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let product of listproducts">
+          <fieldset>
+              <legend>Product {{product.id}}</legend>
+           Prix : {{product.price}} <br>
+          <button (click)="addTocart(product.id)">Buy </button> || 
+            <button> Details</button>
+          </fieldset> 
+    </li>
+</ul>

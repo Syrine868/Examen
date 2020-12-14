@@ -1,0 +1,29 @@
+
+<h1>User Form</h1>
+<form #f= "ngForm">
+    <label>Nom</label>
+    <input type="text" placeholder="nom"  [(ngModel)]="p.name" #nom="ngModel" minlength="3" name="name"/>
+    <div *ngIf="nom.errors?.minlength">
+        <p>Le nom doit contenir au moins 3 caractéres </p>
+    </div>   <br>
+    <br>
+
+    <label>Price</label>
+    <input type="number" pattern="[0-9]*" placeholder="price"  [(ngModel)]="p.price" #price="ngModel"  name="price"/>
+    <div *ngIf="price.errors?.pattern">
+        <p>Le prix Obligatoire et doit être numérique </p>
+    </div>
+    <br>
+    <br>
+
+    <label>Description</label>
+    <input type="text" placeholder="description" minlength="10" [(ngModel)]="p.description" #description="ngModel" required name="description"/>
+    <div *ngIf="description.errors?.minlength">
+        <p>description Obligatoire doit contenir au - 10 caractéres</p>
+    </div>
+   <br>   <br>
+
+  
+       <button [disabled]="f.invalid" (click)="save()">Ajouter le produit</button>
+</form>
+

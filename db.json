@@ -1,0 +1,20 @@
+{
+  "product": [
+    {
+      "name": "The king",
+      "price": 25,
+      "description": "the best type ever",
+      "id": 1
+    },
+    {
+      "name": "test",
+      "price": 2,
+      "description": "description type ",
+      "id": 2
+    }
+  ],
+  "cart":[
+    
+  ]
+  
+}
